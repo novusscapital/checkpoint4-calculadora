@@ -1,0 +1,51 @@
+button form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    align-items: center;
+}
+
+button input#display {
+    grid-column: 1 / -1;
+    padding: 12px 14px;
+    font-size: 18px;
+    border: 1px solid #d1d5db;
+    outline: none;
+    background: #fbfdff;
+}
+
+button {
+    height: 56px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    background: #1976d2;
+    color: white;
+    box-shadow: 0 3px 8px rgba(25, 117, 210, 0.12);
+}
+
+button.operator {
+    background: #ff9800;
+    color: #111;
+}
+
+button.equals {
+    background: #2e7d32;
+}
+
+button:active {
+    transform: translateY(1px);
+    filter: brightness(.96);
+}
+
+#resultado {
+    padding: 12px;
+    margin-bottom: 12px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 8px;
+    background: linear-gradient(180deg, #e9f7ff, #f0fbff);
+    border: 1px solid #dbeafe;
+    color: #0b5cff;
+}
