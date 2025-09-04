@@ -76,3 +76,35 @@ button {
         width: 100%;
     }
 }
+
+.history-container {
+  max-height: 250px;
+  overflow-y: auto;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.history-container h2,
+.history-container button {
+  margin-bottom: 10px;
+}
+
+.history-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.history-container th,
+.history-container td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.history-container th {
+  background-color: #007bff;
+  color: white;
+}
