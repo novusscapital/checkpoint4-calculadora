@@ -1,0 +1,8 @@
+.header{
+    background-color: white;
+    border: 1px transparent cyan;
+    padding: 6px;
+    margin-bottom: 14px;
+    border-radius: 5px;
+    justify-items: center;
+}
