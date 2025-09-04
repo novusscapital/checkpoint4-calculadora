@@ -1,6 +1,10 @@
-import { useState } from "react";
+import Header from "./components/header";
+import { useState, useEffect } from "react";
 import Resultado from "../src/components/resultado";
 import TabelaCalculos from "../src/components/tabela";
+import Footer from "../src/components/footer"
+import '../src/css/global.css'
+
 
 function App() {
   const [expressao, setExpressao] = useState("");
@@ -33,6 +37,7 @@ function App() {
 
   return (
     <>
+      <Header />
       <div className="Container">
         <div className="box">
           <form onSubmit={(e) => e.preventDefault()}>
@@ -49,47 +54,41 @@ function App() {
               />
             </div>
 
-            <div>
-              <button type="button" onClick={() => adicionar("(")}>(</button>
-              <button type="button" onClick={() => adicionar(")")}>)</button>
-              <button type="button" onClick={() => adicionar("%")}>%</button>
-              <button type="button" onClick={() => adicionar("/")}>/</button>
-            </div>
+            <section className="box-button">
+              <div>
+                <button type="button" onClick={() => adicionar("7")}>7</button>
+                <button type="button" onClick={() => adicionar("8")}>8</button>
+                <button type="button" onClick={() => adicionar("9")}>9</button>
+                <button type="button" onClick={() => adicionar("*")}>X</button>
+                <button type="button" onClick={() => adicionar("/")}>/</button>
+              </div>
 
-            <div>
-              <button type="button" onClick={() => adicionar("7")}>7</button>
-              <button type="button" onClick={() => adicionar("8")}>8</button>
-              <button type="button" onClick={() => adicionar("9")}>9</button>
-              <button type="button" onClick={() => adicionar("*")}>*</button>
-            </div>
+              <div>
+                <button type="button" onClick={() => adicionar("4")}>4</button>
+                <button type="button" onClick={() => adicionar("5")}>5</button>
+                <button type="button" onClick={() => adicionar("6")}>6</button>
+                <button type="button" onClick={() => adicionar("-")}>-</button>
+              </div>
 
-            <div>
-              <button type="button" onClick={() => adicionar("4")}>4</button>
-              <button type="button" onClick={() => adicionar("5")}>5</button>
-              <button type="button" onClick={() => adicionar("6")}>6</button>
-              <button type="button" onClick={() => adicionar("-")}>-</button>
-            </div>
+              <div>
+                <button type="button" onClick={() => adicionar("1")}>1</button>
+                <button type="button" onClick={() => adicionar("2")}>2</button>
+                <button type="button" onClick={() => adicionar("3")}>3</button>
+                <button type="button" onClick={() => adicionar("+")}>+</button>
+              </div>
 
-            <div>
-              <button type="button" onClick={() => adicionar("1")}>1</button>
-              <button type="button" onClick={() => adicionar("2")}>2</button>
-              <button type="button" onClick={() => adicionar("3")}>3</button>
-              <button type="button" onClick={() => adicionar("+")}>+</button>
-            </div>
+              <div>
+                <button type="button" onClick={() => adicionar(",")}>,</button>
+                <button type="button" onClick={() => adicionar("0")}>0</button>
+                <button type="button" onClick={calcular}>=</button>
+                <button type="button" onClick={limpar}>C</button>
+              </div>
 
-            <div>
-              <button type="button" onClick={() => adicionar("0")}>0</button>
-              <button type="button" onClick={() => adicionar(".")}>.</button>
-              <button type="button" onClick={calcular}>=</button>
-              <button type="button" onClick={limpar}>C</button>
-            </div>
-
-            <Resultado valor={resultado} />
+            </section>
+              <Resultado valor={resultado} />
           </form>
-
-          {/* Histórico dos Cálculos */}
-          <TabelaCalculos historico={historico} />
         </div>
+        <TabelaCalculos historico={historico} />
       </div>
     </>
   );

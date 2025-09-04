@@ -1,6 +1,9 @@
+import '../css/global.css'
+import '../css/tabela.css'
+
 function TabelaCalculos({ historico }) {
   return (
-    <table border="1" style={{ marginTop: "16px", width: "100%", textAlign: "center" }}>
+    <table className="historico">
       <thead>
         <tr>
           <th>Operação</th>

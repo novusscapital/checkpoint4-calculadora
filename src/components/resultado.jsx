@@ -1,3 +1,6 @@
+import '../css/global.css'
+import '../css/resultado.css'
+
 function Resultado({ valor }) {
   return (
     <div id="resultado">
