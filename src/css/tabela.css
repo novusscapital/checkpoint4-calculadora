@@ -1,0 +1,27 @@
+.historico {
+  width: 100%;
+  margin-top: 16px;
+  border-collapse: collapse;
+  text-align: center;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+}
+
+.historico th {
+  background-color: #0077cc;
+  color: white;
+  padding: 10px;
+}
+
+.historico td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.historico tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.historico tr:hover {
+  background-color: #e6f7ff;
+}
