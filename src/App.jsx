@@ -2,7 +2,6 @@ import Header from "./components/header";
 import { useState, useEffect } from "react";
 import Resultado from "../src/components/resultado";
 import TabelaCalculos from "../src/components/tabela";
-import Footer from "../src/components/footer"
 import '../src/css/global.css'
 
 
