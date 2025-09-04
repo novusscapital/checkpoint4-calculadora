@@ -23,10 +23,15 @@ function App() {
       setHistorico([
         ...historico,
         { expressao: expressao, resultado: res }
+
       ]);
     } catch (e) {
       setResultado("Erro");
     }
+  };
+
+  const limparHistorico = () => {
+    setHistorico([]);
   };
 
   const limpar = () => {
@@ -51,6 +56,10 @@ function App() {
                 value={expressao}
                 onChange={(e) => setExpressao(e.target.value)}
               />
+            </div>
+
+            <div class="progress-container">
+              <div class="progress-bar" id="myBar"></div>
             </div>
 
             <section className="box-button">
@@ -81,10 +90,11 @@ function App() {
                 <button type="button" onClick={() => adicionar("0")}>0</button>
                 <button type="button" onClick={calcular}>=</button>
                 <button type="button" onClick={limpar}>C</button>
+                <button type="button" onClick={limparHistorico}>CE</button>
               </div>
 
             </section>
-              <Resultado valor={resultado} />
+            <Resultado valor={resultado} />
           </form>
         </div>
         <TabelaCalculos historico={historico} />
