@@ -105,12 +105,14 @@ function App() {
                 <button type="button" onClick={() => adicionar("5")}>5</button>
                 <button type="button" onClick={() => adicionar("6")}>6</button>
                 <button type="button" onClick={() => adicionar("-")}>-</button>
+                <button type="button" onClick={() => adicionar("(")}>(</button>
               </div>
               <div>
                 <button type="button" onClick={() => adicionar("1")}>1</button>
                 <button type="button" onClick={() => adicionar("2")}>2</button>
                 <button type="button" onClick={() => adicionar("3")}>3</button>
                 <button type="button" onClick={() => adicionar("+")}>+</button>
+                <button type="button" onClick={() => adicionar(")")}>)</button>
               </div>
               <div>
                 <button type="button" onClick={() => adicionar(",")}>,</button>
