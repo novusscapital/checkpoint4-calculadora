@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { evaluate } from "mathjs";
-import './global.css';
+import '../src/css/global.css';
 
 // Componente TabelaCalculos
 const TabelaCalculos = ({ historico, limparHistorico }) => {
